@@ -6,7 +6,3 @@
 	path = external/glog
 	url = https://github.com/google/glog.git
 	branch = master
-[submodule "external/gflags"]
-	path = external/gflags
-	url = https://github.com/gflags/gflags.git
-	branch = master
