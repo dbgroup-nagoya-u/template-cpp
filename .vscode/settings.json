@@ -28,9 +28,11 @@
   "cSpell.words": [
     "DBUILD",
     "DCMAKE",
+    "GLOG",
     "Wextra",
     "alignas",
     "ctest",
+    "gflags",
     "gtest",
     "pthread"
   ],
