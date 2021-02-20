@@ -1,6 +1,6 @@
 # C++ template
 
-![Unit Tests](https://github.com/dbgroup-nagoya-u/repo-name/workflows/Unit%20Tests/badge.svg?branch=main)
+![Unit Tests](https://github.com/dbgroup-nagoya-u/template-cpp/workflows/Unit%20Tests/badge.svg?branch=main)
 
 **Note**: set your repository URL to show CI status.
 
