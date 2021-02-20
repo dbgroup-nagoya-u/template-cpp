@@ -11,7 +11,7 @@
 Describe setting steps for this repository.
 
 ```bash
-sudo apt update && sudo apt install -y build-essential cmake
+sudo apt update && sudo apt install -y build-essential cmake libgflags-dev
 ```
 
 ### Build Options
