@@ -17,6 +17,12 @@ jobs:
     - name: Clone Main Repository
       uses: actions/checkout@v2
 
+    - name: Clone Submodule - glog
+      uses: actions/checkout@v2
+      with:
+        repository: google/glog
+        path: external/glog
+
     - name: Clone Submodule - GoogleTest
       uses: actions/checkout@v2
       with:

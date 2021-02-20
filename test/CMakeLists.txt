@@ -23,3 +23,4 @@ function(ADD_PROJECT_TEST PROJECT_TEST_TARGET)
 endfunction()
 
 # add unit tests to build targets
+ADD_PROJECT_TEST("hello_world_test")

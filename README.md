@@ -18,9 +18,9 @@ sudo apt update && sudo apt install -y build-essential cmake
 
 List build options.
 
-**Note**: if you implement a library, add your library name to `BUILD_TESTS` such as `LIB_NAME_BUILD_TESTS` (in `CMakeList.txt`, `.vscode/cmake-variants.yaml`, and `.github/workflows/unit_tests.yaml`).
-
 - `BUILD_TESTS`: build unit tests for this repository if `on` (default: `off`).
+
+**Note**: if you implement a library, add your library name to `BUILD_TESTS` such as `LIB_NAME_BUILD_TESTS` (in `CMakeList.txt`, `.vscode/cmake-variants.yaml`, and `.github/workflows/unit_tests.yaml`).
 
 ### Build and Run Unit Tests
 
