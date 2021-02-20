@@ -35,6 +35,7 @@ target_compile_options(cpp_template PRIVATE
 )
 target_link_libraries(cpp_template PRIVATE
   glog::glog
+  gflags
 )
 add_dependencies(cpp_template
   glog::glog

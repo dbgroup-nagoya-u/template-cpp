@@ -13,6 +13,7 @@ function(ADD_PROJECT_TEST PROJECT_TEST_TARGET)
   )
   target_link_libraries(${PROJECT_TEST_TARGET} PRIVATE
     glog::glog
+    gflags
     gtest_main
   )
   add_dependencies(${PROJECT_TEST_TARGET}
