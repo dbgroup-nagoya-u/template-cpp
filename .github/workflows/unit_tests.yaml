@@ -14,25 +14,17 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
 
-    - name: Clone Main Repository
-      uses: actions/checkout@v2
-
-    - name: Clone Submodule - glog
+    - name: Clone Repository
       uses: actions/checkout@v2
       with:
-        repository: google/glog
-        path: external/glog
-
-    - name: Clone Submodule - GoogleTest
-      uses: actions/checkout@v2
-      with:
-        repository: google/googletest
-        path: external/googletest
+        submodules: recursive
+        #ssh-key: ${{secrets.SSH_KEY_FOR_ACTIONS}}
+        #persist-credentials: false
 
     - name: Create Build Environment
       shell: bash
       run: |
-        sudo apt-get install -y build-essential cmake libgflags-dev
+        sudo apt-get install -y build-essential cmake
         cmake -E make_directory ${{github.workspace}}/build
 
     - name: Configure CMake
