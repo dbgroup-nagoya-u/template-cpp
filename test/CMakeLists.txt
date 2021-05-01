@@ -1,3 +1,16 @@
+#--------------------------------------------------------------------------------------#
+# Configure GoogleTest
+#--------------------------------------------------------------------------------------#
+
+# Prevent overriding the parent INDEX_BENCH's compiler/linker settings on Windows
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/external/googletest")
+
+#--------------------------------------------------------------------------------------#
+# Build Unit Tests
+#--------------------------------------------------------------------------------------#
+
 # define function to add unit tests in the same format
 function(ADD_PROJECT_TEST PROJECT_TEST_TARGET)
   add_executable(${PROJECT_TEST_TARGET}

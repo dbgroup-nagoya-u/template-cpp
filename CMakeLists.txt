@@ -15,7 +15,6 @@ project(cpp_template
 # define source directories
 set(PROJECT_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
 set(GLOG_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external/glog")
-set(GOOGLETEST_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external/googletest")
 
 # use glog as a logger (this also includes gflags)
 set (BUILD_TESTING OFF CACHE BOOL "" FORCE)
@@ -46,8 +45,6 @@ option(BUILD_TESTS, "Build unit tests" OFF)
 if(${BUILD_TESTS})
   # enable CTest
   enable_testing()
-  # use GoogleTest for unit tests
-  add_subdirectory("${GOOGLETEST_SOURCE_DIR}")
   # include unit tests
   add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/test")
 endif()
