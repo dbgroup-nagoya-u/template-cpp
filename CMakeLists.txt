@@ -53,7 +53,10 @@ add_dependencies(
   gflags
 )
 
-# build unit tests if required
+#--------------------------------------------------------------------------------------#
+# Build unit tests if required
+#--------------------------------------------------------------------------------------#
+
 option(BUILD_TESTS, "Build unit tests" OFF)
 if(${BUILD_TESTS})
   # enable CTest

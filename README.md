@@ -12,6 +12,8 @@ Describe setting steps for this repository.
 
 ```bash
 sudo apt update && sudo apt install -y build-essential cmake
+cd <path_to_your_workspace>
+git clone --recursive git@github.com:dbgroup-nagoya-u/template-cpp.git
 ```
 
 ### Build Options
@@ -27,4 +29,12 @@ mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=on ..
 make -j
 ctest -C Release
+```
+
+## Usage
+
+The following command displays available CLI options:
+
+```bash
+./hello_world --helpshort
 ```
