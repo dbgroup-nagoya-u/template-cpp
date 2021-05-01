@@ -14,13 +14,20 @@ project(cpp_template
 
 # define source directories
 set(PROJECT_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
-set(GLOG_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external/glog")
 
-# use glog as a logger (this also includes gflags)
-set (BUILD_TESTING OFF CACHE BOOL "" FORCE)
-add_subdirectory("${GLOG_SOURCE_DIR}")
+#--------------------------------------------------------------------------------------#
+# Configure gflags
+#--------------------------------------------------------------------------------------#
 
-# build executable
+# prevent building unit tests
+set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
+
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/external/gflags")
+
+#--------------------------------------------------------------------------------------#
+# Build project
+#--------------------------------------------------------------------------------------#
+
 add_executable(cpp_template
   "${PROJECT_SOURCE_DIR}/hello_world.cpp"
 )
@@ -33,11 +40,10 @@ target_compile_options(cpp_template PRIVATE
   $<$<STREQUAL:${CMAKE_BUILD_TYPE},"Debug">:"-g3 -O0 -pg">
 )
 target_link_libraries(cpp_template PRIVATE
-  glog::glog
   gflags
 )
 add_dependencies(cpp_template
-  glog::glog
+  gflags
 )
 
 # build unit tests if required

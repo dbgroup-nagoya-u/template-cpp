@@ -25,12 +25,11 @@ function(ADD_PROJECT_TEST PROJECT_TEST_TARGET)
     $<$<STREQUAL:${CMAKE_BUILD_TYPE},"Debug">:"-g3 -O0 -pg">
   )
   target_link_libraries(${PROJECT_TEST_TARGET} PRIVATE
-    glog::glog
     gflags
     gtest_main
   )
   add_dependencies(${PROJECT_TEST_TARGET}
-    glog::glog
+    gflags
     gtest_main
   )
   add_test(NAME ${PROJECT_TEST_TARGET} COMMAND $<TARGET_FILE:${PROJECT_TEST_TARGET}>)
