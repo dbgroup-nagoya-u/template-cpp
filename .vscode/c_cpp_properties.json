@@ -6,11 +6,7 @@
       "cStandard": "gnu17",
       "cppStandard": "gnu++17",
       "intelliSenseMode": "linux-gcc-x64",
-      "includePath": [
-        "${workspaceFolder}/src",
-        "${workspaceFolder}/external/glog/src",
-        "${workspaceFolder}/external/googletest/googletest/include"
-      ],
+      "includePath": [],
       "configurationProvider": "ms-vscode.cmake-tools"
     }
   ],
