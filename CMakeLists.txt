@@ -6,7 +6,8 @@ if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
 endif()
 
 # project information
-project(hello_world
+project(
+  hello_world
   VERSION "0.1.0"
   DESCRIPTION "A template project for C++ language."
   LANGUAGES "CXX"
@@ -25,7 +26,7 @@ set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/external/gflags")
 
 #--------------------------------------------------------------------------------------#
-# Build project
+# Build targets
 #--------------------------------------------------------------------------------------#
 
 add_executable(
@@ -46,10 +47,6 @@ target_compile_options(
 )
 target_link_libraries(
   hello_world PRIVATE
-  gflags
-)
-add_dependencies(
-  hello_world
   gflags
 )
 

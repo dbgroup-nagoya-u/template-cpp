@@ -53,11 +53,6 @@ function(ADD_HELLO_WORLD_TEST HELLO_WORLD_TEST_TARGET)
     gflags
     gtest_main
   )
-  add_dependencies(
-    ${HELLO_WORLD_TEST_TARGET}
-    gflags
-    gtest_main
-  )
   add_test(NAME ${HELLO_WORLD_TEST_TARGET} COMMAND $<TARGET_FILE:${HELLO_WORLD_TEST_TARGET}>)
 endfunction()
 
