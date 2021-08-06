@@ -1,6 +1,6 @@
 # Hello World
 
-![Unit Tests](https://github.com/dbgroup-nagoya-u/template-cpp/workflows/Unit%20Tests/badge.svg?branch=main)
+![Ubuntu-20.04](https://github.com/dbgroup-nagoya-u/template-cpp/workflows/Ubuntu-20.04/badge.svg?branch=main)
 
 **Note**: set your repository URL to show CI status.
 
@@ -19,6 +19,8 @@ git clone --recursive git@github.com:dbgroup-nagoya-u/template-cpp.git
 ### Build Options
 
 List build options.
+
+### Build Options for Unit Testing
 
 - `BUILD_TESTS`: build unit tests if `on` (default: `off`).
 

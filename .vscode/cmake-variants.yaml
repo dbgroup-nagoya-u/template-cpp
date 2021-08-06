@@ -7,16 +7,16 @@ buildType:
       long: Include debugging information without optimizations
       buildType: Debug
       settings:
-        BUILD_TESTS: on
+        BUILD_TESTS: ON
     relWithDebInfo:
       short: RelWithDebInfo
       long: Perform optimizations and include debugging informatin
       buildType: RelWithDebInfo
       settings:
-        BUILD_TESTS: on
+        BUILD_TESTS: ON
     release:
       short: Release
       long: Perform optimizations and omit debugging informatin
       buildType: Release
       settings:
-        BUILD_TESTS: on
+        BUILD_TESTS: ON
