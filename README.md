@@ -22,7 +22,7 @@ List build options.
 
 ### Build Options for Unit Testing
 
-- `BUILD_TESTS`: build unit tests if `on` (default: `off`).
+- `BUILD_TESTS`: build unit tests if `ON` (default: `OFF`).
 
 ### Build and Run Unit Tests
 
