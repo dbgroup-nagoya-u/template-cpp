@@ -20,6 +20,8 @@ git clone --recursive git@github.com:dbgroup-nagoya-u/template-cpp.git
 
 List build options.
 
+### Build Options for Unit Testing
+
 - `BUILD_TESTS`: build unit tests if `on` (default: `off`).
 
 ### Build and Run Unit Tests
