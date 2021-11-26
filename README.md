@@ -11,7 +11,7 @@
 Describe setting steps for this repository.
 
 ```bash
-sudo apt update && sudo apt install -y build-essential cmake
+sudo apt update && sudo apt install -y build-essential cmake libgflags-dev
 cd <path_to_your_workspace>
 git clone --recursive git@github.com:dbgroup-nagoya-u/template-cpp.git
 ```

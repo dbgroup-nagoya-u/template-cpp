@@ -17,13 +17,10 @@ project(
 set(HELLO_WORLD_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
 #--------------------------------------------------------------------------------------#
-# Configure gflags
+# Use gflags to manage CLI options
 #--------------------------------------------------------------------------------------#
 
-# prevent building unit tests
-set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
-
-add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/external/gflags")
+find_package(gflags REQUIRED)
 
 #--------------------------------------------------------------------------------------#
 # Build targets
