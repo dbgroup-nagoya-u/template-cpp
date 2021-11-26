@@ -1,8 +1,8 @@
 # Hello World
 
-![Ubuntu-20.04](https://github.com/dbgroup-nagoya-u/template-cpp/workflows/Ubuntu-20.04/badge.svg?branch=main)
+[![Ubuntu-20.04](https://github.com/dbgroup-nagoya-u/template-cpp/actions/workflows/unit_tests.yaml/badge.svg)](https://github.com/dbgroup-nagoya-u/template-cpp/actions/workflows/unit_tests.yaml)
 
-**Note**: set your repository URL to show CI status.
+Note: you can get status badges from `Actions`-`<your_workflow_name>`-`...`-`Create status badge` in your repository.
 
 ## Build
 
@@ -11,14 +11,20 @@
 Describe setting steps for this repository.
 
 ```bash
-sudo apt update && sudo apt install -y build-essential cmake
+sudo apt update && sudo apt install -y build-essential cmake libgflags-dev
 cd <path_to_your_workspace>
-git clone --recursive git@github.com:dbgroup-nagoya-u/template-cpp.git
+git clone git@github.com:dbgroup-nagoya-u/template-cpp.git
+```
+
+Note: if your repository includes submodules, specify `--recurse-submodules` option.
+
+```bash
+git clone --recurse-submodules git@github.com:dbgroup-nagoya-u/template-cpp.git
 ```
 
 ### Build Options
 
-List build options.
+Enumerate build options.
 
 ### Build Options for Unit Testing
 

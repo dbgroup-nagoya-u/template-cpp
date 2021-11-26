@@ -40,15 +40,16 @@
     "-whitespace/newline",
   ],
   "cSpell.words": [
-    "DBUILD",
-    "DCMAKE",
-    "GLOG",
-    "Wextra",
     "alignas",
     "ctest",
+    "DBUILD",
+    "DCMAKE",
     "gflags",
+    "GLOG",
     "gtest",
-    "pthread"
+    "libgflags",
+    "pthread",
+    "Wextra"
   ],
   "files.associations": {
     "fstream": "cpp",

@@ -17,36 +17,29 @@ project(
 set(HELLO_WORLD_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
 
 #--------------------------------------------------------------------------------------#
-# Configure gflags
+# Use gflags to manage CLI options
 #--------------------------------------------------------------------------------------#
 
-# prevent building unit tests
-set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
-
-add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/external/gflags")
+find_package(gflags REQUIRED)
 
 #--------------------------------------------------------------------------------------#
 # Build targets
 #--------------------------------------------------------------------------------------#
 
-add_executable(
-  hello_world
+add_executable(hello_world
   "${HELLO_WORLD_SOURCE_DIR}/hello_world.cpp"
 )
-target_compile_features(
-  hello_world PRIVATE
+target_compile_features(hello_world PRIVATE
   "cxx_std_17"
 )
-target_compile_options(
-  hello_world PRIVATE
+target_compile_options(hello_world PRIVATE
   -Wall
   -Wextra
   $<$<STREQUAL:${CMAKE_BUILD_TYPE},"Release">:"-O2 -march=native">
   $<$<STREQUAL:${CMAKE_BUILD_TYPE},"RelWithDebInfo">:"-g3 -Og -pg">
   $<$<STREQUAL:${CMAKE_BUILD_TYPE},"Debug">:"-g3 -O0 -pg">
 )
-target_link_libraries(
-  hello_world PRIVATE
+target_link_libraries(hello_world PRIVATE
   gflags
 )
 
