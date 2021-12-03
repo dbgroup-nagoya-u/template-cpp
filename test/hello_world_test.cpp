@@ -18,31 +18,29 @@
 
 class HelloWorldFixture : public ::testing::Test
 {
- public:
-  int64_t common_variable;
-
  protected:
   void
   SetUp() override
   {
-    common_variable = 0;
   }
 
   void
   TearDown() override
   {
   }
+
+  int64_t common_variable_ = 0;
 };
 
-TEST_F(HelloWorldFixture, TestTarget_Situation_DesiredResults)
+TEST_F(HelloWorldFixture, TestTargetWithSituationGetDesiredResults)
 {
-  EXPECT_EQ(0, common_variable);
-  EXPECT_NE(1, common_variable);
-  EXPECT_LT(common_variable, 1);
-  EXPECT_LE(common_variable, 0);
-  EXPECT_GT(1, common_variable);
-  EXPECT_GE(0, common_variable);
-  auto is_equal = common_variable == 0;
+  EXPECT_EQ(0, common_variable_);
+  EXPECT_NE(1, common_variable_);
+  EXPECT_LT(common_variable_, 1);
+  EXPECT_LE(common_variable_, 0);
+  EXPECT_GT(1, common_variable_);
+  EXPECT_GE(0, common_variable_);
+  auto is_equal = common_variable_ == 0;
   EXPECT_TRUE(is_equal);
   EXPECT_FALSE(!is_equal);
 }
