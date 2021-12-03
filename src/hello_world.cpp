@@ -23,8 +23,11 @@
  *################################################################################################*/
 
 template <class Number>
-static bool
-ValidateNonZero(const char* flagname, const Number value)
+static auto
+ValidateNonZero(  //
+    const char* flagname,
+    const Number value)  //
+    -> bool
 {
   if (value != 0) {
     return true;
@@ -45,8 +48,11 @@ DEFINE_validator(nonzero_value, &ValidateNonZero);
  * Main function
  *################################################################################################*/
 
-int
-main(int argc, char* argv[])
+auto
+main(  //
+    int argc,
+    char* argv[])  //
+    -> int
 {
   // parse and remove command line options
   gflags::SetUsageMessage("is a sample project for a C++ template repository.");
