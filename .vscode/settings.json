@@ -1,11 +1,14 @@
 {
+  // editor settings
   "editor.rulers": [
     88,
     100
   ],
+  "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
+  // files settings
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
@@ -23,15 +26,21 @@
     "**/node_modules/*/**": true,
     "**/.hg/store/**": true,
   },
+  // unit test settings
   "testMate.cpp.test.runtimeLimit": 60,
   "testMate.cpp.test.executables": "build/**/test/*_test",
-  "[cmake]": {
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
-  },
+  // cmake settings
   "cmake.configureOnOpen": true,
   "cmake.buildDirectory": "${workspaceRoot}/build/${buildType}",
   "cmake.generator": "Ninja",
+  // Markdown settings
+  "[markdown]": {
+    "editor.tabSize": 4,
+    "files.trimTrailingWhitespace": false,
+  },
+  "markdown.extension.list.indentationSize": "inherit",
+  "markdown.extension.tableFormatter.enabled": false,
+  // local dictionary
   "cSpell.words": [
     "alignas",
     "ctest",
@@ -44,6 +53,7 @@
     "pthread",
     "Wextra"
   ],
+  //
   "files.associations": {
     "fstream": "cpp",
     "thread": "cpp",
