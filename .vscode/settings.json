@@ -31,14 +31,7 @@
   },
   "cmake.configureOnOpen": true,
   "cmake.buildDirectory": "${workspaceRoot}/build/${buildType}",
-  "cpplint.lineLength": 100,
-  "cpplint.filters": [
-    "-build/c++11",
-    "-readability/fn_size",
-    "-runtime/references",
-    "-whitespace/braces",
-    "-whitespace/newline",
-  ],
+  "cmake.generator": "Ninja",
   "cSpell.words": [
     "alignas",
     "ctest",
