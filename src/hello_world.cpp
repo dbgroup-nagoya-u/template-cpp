@@ -25,7 +25,7 @@
 template <class Number>
 static auto
 ValidateNonZero(  //
-    const char* flagname,
+    const char *flagname,
     const Number value)  //
     -> bool
 {
@@ -51,7 +51,7 @@ DEFINE_validator(nonzero_value, &ValidateNonZero);                     // NOLINT
 auto
 main(  //
     int argc,
-    char* argv[])  //
+    char *argv[])  //
     -> int
 {
   // parse and remove command line options
