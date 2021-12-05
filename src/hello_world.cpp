@@ -25,7 +25,7 @@
 template <class Number>
 static auto
 ValidateNonZero(  //
-    const char* flagname,
+    const char *flagname,
     const Number value)  //
     -> bool
 {
@@ -40,9 +40,9 @@ ValidateNonZero(  //
  * CLI arguments
  *################################################################################################*/
 
-DEFINE_bool(show_value, true, "Show a value to stdout if true");
-DEFINE_uint64(nonzero_value, 1, "An option to set a positive value");
-DEFINE_validator(nonzero_value, &ValidateNonZero);
+DEFINE_bool(show_value, true, "Show a value to stdout if true");       // NOLINT
+DEFINE_uint64(nonzero_value, 1, "An option to set a positive value");  // NOLINT
+DEFINE_validator(nonzero_value, &ValidateNonZero);                     // NOLINT
 
 /*##################################################################################################
  * Main function
@@ -51,7 +51,7 @@ DEFINE_validator(nonzero_value, &ValidateNonZero);
 auto
 main(  //
     int argc,
-    char* argv[])  //
+    char *argv[])  //
     -> int
 {
   // parse and remove command line options

@@ -56,6 +56,7 @@
     "GLOG",
     "gtest",
     "libgflags",
+    "NOLINT",
     "pthread",
     "Wextra"
   ],
