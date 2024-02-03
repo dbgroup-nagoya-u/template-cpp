@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
+// C++ standard libraries
+#include <cstdint>
+
+// external libraries
 #include "gtest/gtest.h"
 
 class HelloWorldFixture : public ::testing::Test

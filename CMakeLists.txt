@@ -13,39 +13,36 @@ project(
   LANGUAGES "CXX"
 )
 
-# define source directories
-set(HELLO_WORLD_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
-
-#--------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
 # Use gflags to manage CLI options
-#--------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
 
 find_package(gflags REQUIRED)
 
-#--------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
 # Build targets
-#--------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
 
-add_executable(hello_world
-  "${HELLO_WORLD_SOURCE_DIR}/hello_world.cpp"
+add_executable(${PROJECT_NAME}
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/hello_world.cpp"
 )
-target_compile_features(hello_world PRIVATE
+target_compile_features(${PROJECT_NAME} PRIVATE
   "cxx_std_17"
 )
-target_compile_options(hello_world PRIVATE
+target_compile_options(${PROJECT_NAME} PRIVATE
   -Wall
   -Wextra
   $<$<STREQUAL:${CMAKE_BUILD_TYPE},"Release">:"-O2 -march=native">
   $<$<STREQUAL:${CMAKE_BUILD_TYPE},"RelWithDebInfo">:"-g3 -Og -pg">
   $<$<STREQUAL:${CMAKE_BUILD_TYPE},"Debug">:"-g3 -O0 -pg">
 )
-target_link_libraries(hello_world PRIVATE
+target_link_libraries(${PROJECT_NAME} PRIVATE
   gflags
 )
 
-#--------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
 # Build unit tests if required
-#--------------------------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
 
 option(BUILD_TESTS, "Build unit tests" OFF)
 if(${BUILD_TESTS})

@@ -14,16 +14,20 @@
  * limitations under the License.
  */
 
-#include <gflags/gflags.h>
-
+// C++ standard libraries
 #include <iostream>
 
-/*######################################################################################
- * CLI validators
- *####################################################################################*/
+// external system libraries
+#include <gflags/gflags.h>
 
+/*##############################################################################
+ * CLI validators
+ *############################################################################*/
+
+namespace
+{
 template <class Number>
-static auto
+auto
 ValidateNonZero(  //
     const char *flagname,
     const Number value)  //
@@ -32,21 +36,23 @@ ValidateNonZero(  //
   if (value != 0) {
     return true;
   }
-  std::cout << "A value must be not zero for " << flagname << std::endl;
+  std::cout << "A value must be not zero for " << flagname << "\n";
   return false;
 }
 
-/*######################################################################################
+}  // namespace
+
+/*##############################################################################
  * CLI arguments
- *####################################################################################*/
+ *############################################################################*/
 
-DEFINE_bool(show_value, true, "Show a value to stdout if true");       // NOLINT
-DEFINE_uint64(nonzero_value, 1, "An option to set a positive value");  // NOLINT
-DEFINE_validator(nonzero_value, &ValidateNonZero);                     // NOLINT
+DEFINE_bool(show_value, true, "Show a value to stdout if true");
+DEFINE_uint64(nonzero_value, 1, "An option to set a positive value");
+DEFINE_validator(nonzero_value, &ValidateNonZero);
 
-/*######################################################################################
+/*##############################################################################
  * Main function
- *####################################################################################*/
+ *############################################################################*/
 
 auto
 main(  //
@@ -60,7 +66,7 @@ main(  //
 
   if (FLAGS_show_value) {
     const auto option_value = FLAGS_nonzero_value;
-    std::cout << option_value << std::endl;
+    std::cout << option_value << "\n";
   }
 
   return 0;

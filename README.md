@@ -4,6 +4,12 @@
 
 Note: you can get status badges from `Actions`-`<your_workflow_name>`-`...`-`Create status badge` in your repository.
 
+- [Build](#build)
+  - [Prerequisites](#prerequisites)
+  - [Build Options](#build-options)
+  - [Build and Run Unit Tests](#build-and-run-unit-tests)
+- [Usage](#usage)
+
 ## Build
 
 ### Prerequisites
@@ -26,7 +32,7 @@ git clone --recurse-submodules git@github.com:dbgroup-nagoya-u/template-cpp.git
 
 Enumerate build options.
 
-### Build Options for Unit Testing
+#### Build Options for Unit Testing
 
 - `BUILD_TESTS`: build unit tests if `ON` (default: `OFF`).
 
@@ -34,7 +40,7 @@ Enumerate build options.
 
 ```bash
 mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=on ..
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=ON ..
 make -j
 ctest -C Release
 ```
