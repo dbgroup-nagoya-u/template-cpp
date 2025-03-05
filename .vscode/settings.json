@@ -26,23 +26,20 @@
     "**/node_modules/*/**": true,
     "**/.hg/store/**": true,
   },
-  // C/C++ settings
-  "C_Cpp.codeAnalysis.runAutomatically": true,
-  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
   // unit test settings
   "testMate.cpp.test.runtimeLimit": 60,
-  "testMate.cpp.test.executables": "build/**/test/*_test",
+  "testMate.cpp.test.executables": "build/vscode/test/*_test",
   // cmake settings
   "[cmake]": {
     "editor.autoIndent": "brackets",
   },
   "cmake.configureOnOpen": true,
-  "cmake.buildDirectory": "${workspaceRoot}/build/${buildType}",
+  "cmake.buildDirectory": "${workspaceRoot}/build/vscode",
   "cmake.generator": "Ninja",
+  "cmake.options.statusBarVisibility": "compact",
   "cmake.debugConfig": {
     "args": []
   },
-  "cmake.options.statusBarVisibility": "compact",
   // Markdown settings
   "[markdown]": {
     "editor.tabSize": 4,
