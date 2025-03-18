@@ -26,6 +26,11 @@
     "**/node_modules/*/**": true,
     "**/.hg/store/**": true,
   },
+  // C/C++ settings
+  "C_Cpp.codeAnalysis.runAutomatically": true,
+  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+  "C_Cpp.codeAnalysis.clangTidy.path": "/usr/bin/clang-tidy",
+  "C_Cpp.codeAnalysis.clangTidy.useBuildPath": true,
   // unit test settings
   "testMate.cpp.test.runtimeLimit": 60,
   "testMate.cpp.test.executables": "build/vscode/test/*_test",
@@ -49,6 +54,10 @@
   "markdown.extension.tableFormatter.enabled": false,
   "markdown.extension.toc.levels": "2..3",
   // local dictionary
+  "cSpell.enabledFileTypes": {
+    "*": true,
+    "ignore": false,
+  },
   "cSpell.words": [
     "alignas",
     "ctest",
