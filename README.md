@@ -5,9 +5,9 @@
 Note: you can get status badges from `Actions`-`<your_workflow_name>`-`...`-`Create status badge` in your repository.
 
 - [Build](#build)
-  - [Prerequisites](#prerequisites)
-  - [Build Options](#build-options)
-  - [Build and Run Unit Tests](#build-and-run-unit-tests)
+    - [Prerequisites](#prerequisites)
+    - [Build Options](#build-options)
+    - [Build and Run Unit Tests](#build-and-run-unit-tests)
 - [Usage](#usage)
 
 ## Build

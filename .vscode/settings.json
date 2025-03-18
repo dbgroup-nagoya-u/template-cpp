@@ -64,6 +64,7 @@
     "dbgroup",
     "DBUILD",
     "DCMAKE",
+    "DNDEBUG",
     "endfunction",
     "gflags",
     "GLOG",
@@ -73,6 +74,7 @@
     "libgflags",
     "NOLINT",
     "pthread",
+    "RELWITHDEBINFO",
     "STREQUAL",
     "varchar",
     "Wextra"
