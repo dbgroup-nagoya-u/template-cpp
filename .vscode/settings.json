@@ -61,14 +61,20 @@
   "cSpell.words": [
     "alignas",
     "ctest",
+    "dbgroup",
     "DBUILD",
     "DCMAKE",
+    "endfunction",
     "gflags",
     "GLOG",
+    "googletest",
     "gtest",
+    "helpshort",
     "libgflags",
     "NOLINT",
     "pthread",
+    "STREQUAL",
+    "varchar",
     "Wextra"
   ],
   //
