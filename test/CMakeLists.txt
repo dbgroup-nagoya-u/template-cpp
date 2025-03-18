@@ -33,9 +33,6 @@ function(ADD_HELLO_WORLD_TEST HELLO_WORLD_TEST_TARGET)
   target_compile_options(${HELLO_WORLD_TEST_TARGET} PRIVATE
     -Wall
     -Wextra
-    $<$<STREQUAL:${CMAKE_BUILD_TYPE},"Release">:"-O2 -march=native">
-    $<$<STREQUAL:${CMAKE_BUILD_TYPE},"RelWithDebInfo">:"-g3 -Og -pg">
-    $<$<STREQUAL:${CMAKE_BUILD_TYPE},"Debug">:"-g3 -O0 -pg">
   )
   target_link_libraries(${HELLO_WORLD_TEST_TARGET} PRIVATE
     gflags

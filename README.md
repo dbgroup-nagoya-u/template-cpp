@@ -30,7 +30,14 @@ git clone --recurse-submodules git@github.com:dbgroup-nagoya-u/template-cpp.git
 
 ### Build Options
 
-Enumerate build options.
+- `CMAKE_USER_MAKE_RULES_OVERRIDE`/`CMAKE_USER_MAKE_RULES_OVERRIDE_CXX`: This library overrides the default C/C++ build flags using `cmake/{c,cxx}_flag_overrides.cmake`. You need to override these variables to use other settings.
+    - For example, the following command will use the default flags.
+        ```bash
+        cmake .. \
+          -DCMAKE_BUILD_TYPE=Release \
+          -DCMAKE_USER_MAKE_RULES_OVERRIDE="" \
+          -DCMAKE_USER_MAKE_RULES_OVERRIDE_CXX=""
+        ```
 
 #### Build Options for Unit Testing
 
