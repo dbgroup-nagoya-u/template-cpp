@@ -5,18 +5,6 @@ if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
   message(FATAL_ERROR "In-source builds are not allowed.")
 endif()
 
-# override C/CXX flags
-set(
-  CMAKE_USER_MAKE_RULES_OVERRIDE
-  "${CMAKE_CURRENT_SOURCE_DIR}/cmake/c_flag_overrides.cmake" CACHE STRING
-  "Override build flags for C programs."
-)
-set(
-  CMAKE_USER_MAKE_RULES_OVERRIDE_CXX
-  "${CMAKE_CURRENT_SOURCE_DIR}/cmake/cxx_flag_overrides.cmake" CACHE STRING
-  "Override build flags for C++ programs."
-)
-
 # project information
 project(
   hello_world
@@ -42,6 +30,8 @@ target_compile_features(${PROJECT_NAME} PRIVATE
   "cxx_std_17"
 )
 target_compile_options(${PROJECT_NAME} PRIVATE
+  $<$<STREQUAL:"${CMAKE_BUILD_TYPE}","Release">:-march=native>
+  $<$<STREQUAL:"${CMAKE_BUILD_TYPE}","Debug">:-g3>
   -Wall
   -Wextra
 )
